@@ -1,6 +1,6 @@
 const express = require('express');
 const ReactSSR = require('react-dom/server');
-const serverEntry = require('../dist/server-entry');
+const serverEntry = require('../dist/server-entry').default;
 const app = express();
 
 app.get('*',function(req,res){

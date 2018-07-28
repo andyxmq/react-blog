@@ -1,2 +1,85 @@
 # react-blog
 react webpack  mobx
+
+
+## 单页应用
+    所有内容都在前端生成
+    js承担更多的业务逻辑，后端只提供API
+    页面路由调转不需要经过后端
+
+    常用类库：
+        react、ng、backbone、vue
+
+    架构工具：
+        npm bower jspm
+
+    模块化工具
+        webpack    
+        rollup
+        browserify
+## 多页应用
+
+    特征：内容都由服务端用模板生成
+    每次页面跳转都要经过服务端
+    JS更多的是做做动画
+
+    常用类库： jQuery MooTools  YUI
+架构工具
+
+    grunt：
+    glup: 
+
+模块化工具：
+    seajs cmd
+    requirejs amd
+
+静态文件
+    使用gulp或grunt等工具手动编译到html,自由度低，操作复杂  或者甚至不处理，交给后端，让后端服务处理
+
+
+## 其它考虑
+
+浏览器兼容性
+
+toB 还是toC
+
+移动端还是PC端
+
+## WebApp架构简介
+
+> 工程架构: 解放生产力、围绕解决方案搭建环境、保证项目质量
+
+    解放生产力： 源代码预处理、自动打包，自动更新页面显示、自动处理图片依赖，保证开发和正式环境的统一
+
+    保证项目质量：code lint、不同的环境排除差异、git commit 预处理
+
+> 项目架构:
+
+    技术选型mobox、数据解决方案、整体代码风格
+
+## web 开发常用的网络优化
+
+> 优化方法
+
+    合并资源文件、减少HTTP请求
+    压缩资源文件、减少请求大小
+    利用缓存机制、尽可能使用缓存减少请求
+
+## 开发
+
+    配置webpack.config.js
+    entry output 安装loader: babel-loader babel-core
+
+    配置presets: es2015 loose:true react (npm  i babel-presets-es2015 babel-presets-es2015-loose babel-presets-react)
+
+## 为什么会有服务端渲染
+
+> 单页应用存在的问题
+
+    SEO不友好
+
+    首次请求等待时间较长、体验不好
+
+    react-dom是React专门为web端开发的渲染工具，我们可以在客户端使用react-dom的render方法渲染组件，而在服务端，react-dom/server提供我们将react组件渲染成HTML方法
+
+    服务端渲染： server-entry

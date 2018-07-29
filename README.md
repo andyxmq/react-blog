@@ -80,7 +80,7 @@ toB 还是toC
 
     首次请求等待时间较长、体验不好
 
-    react-dom是React专门为web端开发的渲染工具，我们可以在客户端使用react-dom的render方法渲染组件，而在服务端，react-dom/server提供render我们将react组件渲染成HTML方法
+    react-dom是React专门为web端开发的渲染工具，我们可以在客户端使用react-dom的render方法渲染组件，而在服务端，react-dom/server提供renderToString我们将react组件渲染成HTML方法
 
     服务端渲染： server-entry
 
@@ -88,4 +88,14 @@ toB 还是toC
 
     安装 rimraf 清空 dist npm i rimraf -D
 
-    新建文件夹server 并创建server.js 安装express npm i express -S  16:19
+    新建文件夹server 并创建server.js 安装express npm i express -S  
+
+## 项目开发时的常用配置
+
+> 常用配置
+
+    1. webpack dev server: npm i webpack-dev-server -D
+
+    安装cross-env 修改package.json
+
+    2. Hot module replacement

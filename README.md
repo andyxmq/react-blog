@@ -96,6 +96,8 @@ toB 还是toC
 
     1. webpack dev server: npm i webpack-dev-server -D
 
-    安装cross-env 修改package.json
+    安装cross-env 修改package.json  解决不同变量设置 
 
-    2. Hot module replacement
+    2. Hot module replacement： 保持当前页面状态  npm i react-hot-loader@next -D
+
+    3.上述配置用于开发环境，因此配置webpack 开发配置

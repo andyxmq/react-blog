@@ -101,3 +101,17 @@ toB 还是toC
     2. Hot module replacement： 保持当前页面状态  npm i react-hot-loader@next -D
 
     3.上述配置用于开发环境，因此配置webpack 开发配置
+
+## 服务端渲染
+
+    安装axios npm i axios -S 获取template.html
+
+    安装memory-fs: 存取读取文件 npm i memory-fs -D
+
+    安装： http-proxy-middleware 解决静态文件问题 npm i http-proxy-middleware -D
+
+## 使用eslint和editorconfig 规范代码
+
+    目的：有利于团队合作 
+          存手工规范费时 不准确
+          配合编辑器，自动提醒错误，提高开发效率

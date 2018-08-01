@@ -14,7 +14,7 @@ react webpack  mobx
         npm bower jspm
 
     模块化工具
-        webpack    
+        webpack
         rollup
         browserify
 ## 多页应用
@@ -27,7 +27,7 @@ react webpack  mobx
 架构工具
 
     grunt：
-    glup: 
+    glup:
 
 模块化工具：
     seajs cmd
@@ -88,7 +88,7 @@ toB 还是toC
 
     安装 rimraf 清空 dist npm i rimraf -D
 
-    新建文件夹server 并创建server.js 安装express npm i express -S  
+    新建文件夹server 并创建server.js 安装express npm i express -S
 
 ## 项目开发时的常用配置
 
@@ -96,7 +96,7 @@ toB 还是toC
 
     1. webpack dev server: npm i webpack-dev-server -D
 
-    安装cross-env 修改package.json  解决不同变量设置 
+    安装cross-env 修改package.json  解决不同变量设置
 
     2. Hot module replacement： 保持当前页面状态  npm i react-hot-loader@next -D
 
@@ -112,6 +112,29 @@ toB 还是toC
 
 ## 使用eslint和editorconfig 规范代码
 
-    目的：有利于团队合作 
+    目的：有利于团队合作
           存手工规范费时 不准确
           配合编辑器，自动提醒错误，提高开发效率
+
+    配置git 使用git hook调用eslint进行代码规范验证，不符合规范无法提交
+
+    editorconfig编辑器配置
+
+    1.安装eslint npm i eslint -D 创建.eslintrc
+
+    2.配置.eslintrc  "parser": "babel-eslint", 用某种工具检查js代码
+      每次编译之前检测代码： 修改webpack 配置
+        {
+            enforce: 'pre',
+            test: /.(js|jsx)$/,
+            loader: 'eslint-loader',
+            exclude: [
+                path.resolve(__dirname,'../node_modules')
+            ]
+        },
+
+    安装 相关依赖  npm i babel-eslint eslint-config-airbnb eslint-config-standard eslint-loader eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-node eslint-plugin-standard eslint-plugin-promise
+
+    vscode 安装EditorConfig  npm install -g editorconfig 使用editorConfig 解决LF CRLF
+
+	提交代码限制：git hook  安装： husky npm i husky -D

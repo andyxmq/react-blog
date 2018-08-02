@@ -138,3 +138,12 @@ toB 还是toC
     vscode 安装EditorConfig  npm install -g editorconfig 使用editorConfig 解决LF CRLF
 
 	提交代码限制：git hook  安装： husky npm i husky -D
+
+## 优化代码
+	1.webpack-merge 优化webpack 配置
+
+	2.处理favicon 安装serve-favicon
+
+## 解决服务自动启动问题
+
+	1、nodemon 模块 npm i

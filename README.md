@@ -1,7 +1,6 @@
 # react-blog
 react webpack  mobx
 
-
 ## 单页应用
     所有内容都在前端生成
     js承担更多的业务逻辑，后端只提供API
@@ -39,11 +38,11 @@ react webpack  mobx
 
 ## 其它考虑
 
-浏览器兼容性
+    浏览器兼容性
 
-toB 还是toC
+    toB 还是toC
 
-移动端还是PC端
+    移动端还是PC端
 
 ## WebApp架构简介
 

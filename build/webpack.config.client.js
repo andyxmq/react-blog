@@ -1,26 +1,26 @@
-const path = require("path");
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require("webpack")
-const webpackMerge = require("webpack-merge")
-const baseConfig = require("./webpack.config.base");
-const isDev = process.env.NODE_ENV === 'development';
+const webpack = require('webpack')
+const webpackMerge = require('webpack-merge')
+const baseConfig = require('./webpack.config.base')
+const isDev = process.env.NODE_ENV === 'development'
 
 const config= webpackMerge(baseConfig, {
     entry: {
-        app: path.join(__dirname,'../src/app.js')
+        app: path.join(__dirname, '../src/app.js')
     },
     output: {
-        filename: '[name].js',
+        filename: '[name].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname,'../src/template.html')
+            template: path.join(__dirname, '../src/template.html')
         }),
     ]
 });
 
 // localhost:
-if(isDev){
+if(isDev) {
     config.entry = {
         app: [
             'react-hot-loader/patch',

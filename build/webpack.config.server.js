@@ -2,7 +2,7 @@ const path = require("path");
 const webpackMerge = require("webpack-merge");
 const baseConfig = require("./webpack.config.base");
 module.exports = webpackMerge(baseConfig,{
-    target: 'node', //使用在那个执行环境当中
+    target: 'node', // 
     entry: {
         app: path.join(__dirname,'../src/server-entry.js')
     },

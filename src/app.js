@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppContainer } from 'react-hot-loader'  /* eslint-disable-line */
 import ReactDOM from 'react-dom'
-import App from './views/App'
+import App from './Tess'
 
 // ReactDOM.hydrate(<App />,document.getElementById("root"));
 
